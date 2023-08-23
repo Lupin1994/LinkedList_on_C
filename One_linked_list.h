@@ -1,11 +1,13 @@
-typedef struct LinkedListItem TLinkedListItem;
+typedef struct LinkedList Llist;
 
-struct LinkedListItem
+struct LinkedList
 {
-    int *value;
-    TLinkedListItem *next_item;
+    int length;
+    int *array;
+
+    int value;
+    int next_value;
 };
+void LlistPrint(Llist *entry_list);
 
-void linked_list_print(TLinkedListItem *head);
-
-TLinkedListItem* linked_list_create();
+Llist* linkedlist_create();

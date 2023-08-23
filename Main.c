@@ -5,7 +5,7 @@
 
 int main()
 {
-    TLinkedListItem *new_list = linked_list_create();
-    linked_list_print(new_list);
+    Llist *new_list = linkedlist_create();
+    LlistPrint(new_list);
 }
 

@@ -3,38 +3,19 @@
 #include <stdbool.h>
 #include "One_linked_list.h"
 
-// void linked_list_print(TLinkedListItem *head){
-//     printf("[");
-//     for (int i = 0; i < entry_list->length; i++)
-//     {
-//         printf("%d,\t", entry_list->array[i]);
-//     }
-//     printf("]\n");
-// }
-
-TLinkedListItem* linked_list_create(){
-
-    TLinkedListItem *head = (TLinkedListItem*) malloc(sizeof(TLinkedListItem));
-    head->value = NULL;
-    head->next_item = NULL;
-    return head;
+void LlistPrint(Llist *entry_list){
+    printf("[");
+    for (int i = 0; i < entry_list->length; i++)
+    {
+        printf("%d,\t", entry_list->array[i]);
+    }
+    printf("]\n");
 }
 
-void linked_list_add(TLinkedListItem *head, int value){
-    if (head->value == NULL)
-    {
-        head->value = value;
-        return;
-    }
+Llist* linkedlist_create(){
 
-    TLinkedListItem *new_item = (TLinkedListItem*) malloc(sizeof(TLinkedListItem));
-    new_item->value = value;
-    new_item->next_item = NULL;
-
-    TLinkedListItem *current_item = head;
-    while (current_item->next_item != NULL)
-    {
-        current_item = current_item->next_item;
-    }
-    current_item->next_item = new_item;
+    Llist *list = (Llist*) malloc(sizeof(Llist));
+    list->length = 1;
+    list->array = (int*) malloc(sizeof(list->length));
+    return list;
 }
