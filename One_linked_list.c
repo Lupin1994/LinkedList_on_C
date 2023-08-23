@@ -13,8 +13,9 @@ void LlistPrint(Llist *entry_list){
 }
 
 Llist* linkedlist_create(){
-    
+
     Llist *list = (Llist*) malloc(sizeof(Llist));
     list->length = 1;
     list->array = (int*) malloc(sizeof(list->length));
+    return list;
 }
