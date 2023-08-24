@@ -3,14 +3,18 @@
 #include <stdbool.h>
 #include "One_linked_list.h"
 
-// void linked_list_print(TLinkedListItem *head){
-//     printf("[");
-//     for (int i = 0; i < entry_list->length; i++)
-//     {
-//         printf("%d,\t", entry_list->array[i]);
-//     }
-//     printf("]\n");
-// }
+void linked_list_print(TLinkedListItem *head){
+    TLinkedListItem *list_writer; 
+    list_writer = head;
+    printf("[");
+    do
+    {
+        printf("%d  ",list_writer->value);
+        list_writer = list_writer->next_item;
+    } while (list_writer != NULL);
+
+    printf("]\n");
+}
 
 TLinkedListItem* linked_list_create(){
 
@@ -24,6 +28,7 @@ void linked_list_add(TLinkedListItem *head, int value){
     if (head->value == NULL)
     {
         head->value = value;
+        head->next_item = NULL;
         return;
     }
 
