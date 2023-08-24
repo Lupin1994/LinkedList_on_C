@@ -7,5 +7,5 @@ struct LinkedListItem
 };
 
 void linked_list_print(TLinkedListItem *head);
-
 TLinkedListItem* linked_list_create();
+void linked_list_add(TLinkedListItem *head, int value);
