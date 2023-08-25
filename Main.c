@@ -6,6 +6,6 @@
 int main()
 {
     Llist *new_list = linkedlist_create();
-    LlistPrint(new_list);
+    LlistPrint(new_list);           
 }
 
